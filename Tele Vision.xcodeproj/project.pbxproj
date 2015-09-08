@@ -15,6 +15,10 @@
 		92D4E68D1B9E47E700430D3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D4E68C1B9E47E700430D3E /* Images.xcassets */; };
 		92D4E6901B9E47E700430D3E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D4E68E1B9E47E700430D3E /* LaunchScreen.xib */; };
 		92D4E69C1B9E47E700430D3E /* Tele_VisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4E69B1B9E47E700430D3E /* Tele_VisionTests.swift */; };
+		92F8FD4A1B9FA7AB0099300A /* logoTelevision.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F8FD481B9FA7AB0099300A /* logoTelevision.png */; };
+		92F8FD4B1B9FA7AB0099300A /* mayobg.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F8FD491B9FA7AB0099300A /* mayobg.png */; };
+		92F8FD4D1B9FA8830099300A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F8FD4C1B9FA8830099300A /* LoginViewController.swift */; };
+		92F8FD4F1B9FA88D0099300A /* PatientIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		92D4E6951B9E47E700430D3E /* Tele VisionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tele VisionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D4E69A1B9E47E700430D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D4E69B1B9E47E700430D3E /* Tele_VisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tele_VisionTests.swift; sourceTree = "<group>"; };
+		92F8FD481B9FA7AB0099300A /* logoTelevision.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTelevision.png; sourceTree = "<group>"; };
+		92F8FD491B9FA7AB0099300A /* mayobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mayobg.png; sourceTree = "<group>"; };
+		92F8FD4C1B9FA8830099300A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientIDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,10 @@
 				92D4E6851B9E47E700430D3E /* DataViewController.swift */,
 				92D4E6871B9E47E700430D3E /* ModelController.swift */,
 				92D4E6891B9E47E700430D3E /* Main.storyboard */,
+				92F8FD4C1B9FA8830099300A /* LoginViewController.swift */,
+				92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */,
+				92F8FD481B9FA7AB0099300A /* logoTelevision.png */,
+				92F8FD491B9FA7AB0099300A /* mayobg.png */,
 				92D4E68C1B9E47E700430D3E /* Images.xcassets */,
 				92D4E68E1B9E47E700430D3E /* LaunchScreen.xib */,
 				92D4E67F1B9E47E700430D3E /* Supporting Files */,
@@ -198,6 +210,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F8FD4B1B9FA7AB0099300A /* mayobg.png in Resources */,
+				92F8FD4A1B9FA7AB0099300A /* logoTelevision.png in Resources */,
 				92D4E68B1B9E47E700430D3E /* Main.storyboard in Resources */,
 				92D4E6901B9E47E700430D3E /* LaunchScreen.xib in Resources */,
 				92D4E68D1B9E47E700430D3E /* Images.xcassets in Resources */,
@@ -221,6 +235,8 @@
 				92D4E6841B9E47E700430D3E /* RootViewController.swift in Sources */,
 				92D4E6881B9E47E700430D3E /* ModelController.swift in Sources */,
 				92D4E6861B9E47E700430D3E /* DataViewController.swift in Sources */,
+				92F8FD4F1B9FA88D0099300A /* PatientIDViewController.swift in Sources */,
+				92F8FD4D1B9FA8830099300A /* LoginViewController.swift in Sources */,
 				92D4E6821B9E47E700430D3E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +435,7 @@
 				92D4E6A11B9E47E700430D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92D4E6A21B9E47E700430D3E /* Build configuration list for PBXNativeTarget "Tele VisionTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +444,7 @@
 				92D4E6A41B9E47E700430D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
