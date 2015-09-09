@@ -1,19 +1,22 @@
 //
-//  PatientIDViewController.swift
+//  PhotoViewController.swift
 //  Tele Vision
 //
-//  Created by Zachary Josephson on 9/8/15.
+//  Created by Zachary Josephson on 9/9/15.
 //  Copyright (c) 2015 Capstone. All rights reserved.
 //
 
 import UIKit
 
-class PatientIDViewController: UIViewController {
+
+
+class PhotoViewController: UIViewController {
     
-    var time = "Yesterday"
+    var name = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(name)
 
         // Do any additional setup after loading the view.
     }
@@ -23,29 +26,9 @@ class PatientIDViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var patientID: UITextField!
-    var authPatient = "1234"
+    //TODO: Implement photo taking or choosing 
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if identifier == "loadPatient" {
-            println("Authenticating")
-            if authPatient == patientID.text {
-                println("Authenticated Patient")
-                return true
-            }
-            else {
-                return false
-            }
-        }
-        
-        else if identifier == "logout" {
-            print("Logout")
-            return true
-        }
-        
-        return false
-    }
-
+    
     /*
     // MARK: - Navigation
 

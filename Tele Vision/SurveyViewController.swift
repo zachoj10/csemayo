@@ -1,14 +1,14 @@
 //
-//  LoginViewController.swift
+//  SurveyViewController.swift
 //  Tele Vision
 //
-//  Created by Zachary Josephson on 9/8/15.
+//  Created by Zachary Josephson on 9/9/15.
 //  Copyright (c) 2015 Capstone. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SurveyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,39 +20,22 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBOutlet weak var name: UITextField!
 
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
-    
-    var authUser = "mayo"
-    var authPass = "admin"
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if identifier == "login" {
-            println("Authenticating")
-            if authUser == username.text && authPass == password.text {
-                println("Authenticated User")
-                return true
-            }
-            else {
-                return false
-            }
-        }
-        
-        return false
-    }
-    
-    
     // MARK: - Navigation
+    
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+       
+        let dest = segue.destinationViewController as! PhotoViewController
+        dest.name = name.text
         
-
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
 
 }
