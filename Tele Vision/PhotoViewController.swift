@@ -28,6 +28,11 @@ class PhotoViewController: UIViewController {
     
     //TODO: Implement photo taking or choosing 
     
+    var imagePicker: UIImagePickerController!
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBAction func takePhoto(sender: UIBarButtonItem) {
+    }
     
     /*
     // MARK: - Navigation

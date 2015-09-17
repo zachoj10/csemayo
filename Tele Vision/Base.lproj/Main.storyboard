@@ -261,6 +261,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-IP-h3h">
+                                <rect key="frame" x="36" y="71" width="302" height="525"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-Bg-KEy">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
@@ -270,20 +273,22 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="wuu-jj-GVP"/>
-                                    <barButtonItem systemItem="camera" id="q4T-bq-5Bo"/>
+                                    <barButtonItem systemItem="camera" id="q4T-bq-5Bo">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="59T-ye-Re7" id="kKn-ON-qt4"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="aVW-A3-KZr"/>
                                     <barButtonItem systemItem="save" id="9k6-f9-ygA"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Eye Image Will Be Here" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKF-9C-x0T">
-                                <rect key="frame" x="102" y="319" width="171" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="Ewq-IP-h3h" id="Y61-2k-7gr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLj-kg-8ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
