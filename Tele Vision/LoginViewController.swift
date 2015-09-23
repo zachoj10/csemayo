@@ -27,11 +27,11 @@ class LoginViewController: UIViewController {
     var authUser = "mayo"
     var authPass = "admin"
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "login" {
-            println("Authenticating")
+            print("Authenticating")
             if authUser == username.text && authPass == password.text {
-                println("Authenticated User")
+                print("Authenticated User")
                 return true
             }
             else {

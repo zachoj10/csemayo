@@ -17,7 +17,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(name)
+        print(name, terminator: "")
 
         // Do any additional setup after loading the view.
     }
@@ -38,30 +38,31 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     //To enable camera, uncomment commented lines and comment out related lines
     @IBAction func takePhoto(sender: UIBarButtonItem) {
         
-        //if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+        //if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
             let imagePicker = UIImagePickerController()
             
             imagePicker.delegate = self
-            //imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-            imagePicker.mediaTypes = [kUTTypeImage as NSString]
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            //imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
             
             self.presentViewController(imagePicker, animated: true, completion: nil)
             
-            //newMedia = true
-            newMedia = false
+            newMedia = true
+            //newMedia = false
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
+        [String : AnyObject]) {
         
         let mediaType = info[UIImagePickerControllerMediaType] as! String
         
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        if mediaType == (kUTTypeImage as! String) {
+        if mediaType == (kUTTypeImage as String) {
             let image = info[UIImagePickerControllerOriginalImage]
                 as! UIImage
             
@@ -70,7 +71,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
             if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self,
                     "image:didFinishSavingWithError:contextInfo:", nil)
-            } else if mediaType == (kUTTypeMovie as! String) {
+            } else if mediaType == (kUTTypeMovie as String) {
                 // Code to support video here
             }
             

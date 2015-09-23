@@ -32,7 +32,7 @@ class SurveyViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
        
         let dest = segue.destinationViewController as! PhotoViewController
-        dest.name = name.text
+        dest.name = name.text!
         
         
         // Get the new view controller using segue.destinationViewController.

@@ -26,11 +26,11 @@ class PatientIDViewController: UIViewController {
     @IBOutlet weak var patientID: UITextField!
     var authPatient = "1234"
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "loadPatient" {
-            println("Authenticating")
+            print("Authenticating")
             if authPatient == patientID.text {
-                println("Authenticated Patient")
+                print("Authenticated Patient")
                 return true
             }
             else {
@@ -39,7 +39,7 @@ class PatientIDViewController: UIViewController {
         }
         
         else if identifier == "logout" {
-            print("Logout")
+            print("Logout", terminator: "")
             return true
         }
         
