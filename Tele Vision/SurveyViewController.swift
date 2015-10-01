@@ -12,8 +12,16 @@ class SurveyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getJson()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
     }
     
 
@@ -32,11 +40,74 @@ class SurveyViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
        
         let dest = segue.destinationViewController as! PhotoViewController
-        dest.name = name.text!
+        //dest.name = name.text!
         
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    
+    
+    
+    func getJson(){
+        //if the json file name "pro" exists then
+        if let path = NSBundle.mainBundle().pathForResource("pro", ofType: "json") {
+            do {
+                
+                let urlPath =  NSURL(string: "https://dl.dropboxusercontent.com/u/9366248/pro.json")
+                
+                //read the json data into data var
+                let data = try NSData(contentsOfURL: urlPath!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                
+                //cast data var to json object
+                let jsonObj = JSON(data: data)
+                
+                
+                //json data integrity and existence check
+                if jsonObj != JSON.null {
+                    print("got json successfully")
+                    
+                    //get jsonfile.form.questions 1st element (starts at 0)
+                
+                    let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 450))
+                    scrollView.backgroundColor = UIColor.clearColor()
+                    scrollView.scrollEnabled = true
+                    scrollView.showsVerticalScrollIndicator = true
+                    
+                    let realJson = jsonObj["form"]["questions"]
+                    print (realJson[0])
+                    for i in 0...realJson.count - 1{
+                        let text = realJson[i]["question"]["fieldLabel"]
+                        //create a uitextview at coord (x=0,y=10) with width 300 and height 700
+                        let tempText = UITextField(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 30))
+                        
+                        tempText.backgroundColor = UIColor.whiteColor();
+                        //add uitextview to main view
+                        scrollView.addSubview(tempText)
+                        
+                        //put the json in var realJson you just gathered, into the uitextview you created
+                        tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
+                        
+                        let tempLabel = UILabel(frame: CGRectMake(10, 10 + 60 * CGFloat(i), 100, 30))
+                        scrollView.addSubview(tempLabel)
+                        
+                        tempLabel.text = "\(text)"
+                        tempLabel.textColor = UIColor.whiteColor();
+                        tempLabel.textAlignment = NSTextAlignment.Right
+                    }
+                    
+                    view.addSubview(scrollView)
+
+                
+                    
+                } else {
+                    print("could not get json obj from file.")
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
 
 }
