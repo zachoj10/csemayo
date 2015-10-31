@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBk-kp-piL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBk-kp-piL">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayobg.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUb-6J-h2y" userLabel="Image Viewer">
-                                <rect key="frame" x="0.0" y="0.0" width="380" height="673"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-Mh-mur">
-                                <rect key="frame" x="67" y="245" width="246" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-Mh-mur">
+                                <rect key="frame" x="64" y="407" width="246" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="N6O-7A-Fxg"/>
@@ -31,8 +29,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bM-vB-Rzi">
-                                <rect key="frame" x="67" y="305" width="246" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bM-vB-Rzi">
+                                <rect key="frame" x="64" y="467" width="246" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1mb-TC-Xzp"/>
@@ -41,7 +40,8 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-VG-1wg">
-                                <rect key="frame" x="156" y="373" width="65" height="30"/>
+                                <rect key="frame" x="153" y="535" width="65" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="1WN-tI-Ka2"/>
@@ -53,8 +53,13 @@
                                     <segue destination="NGo-gt-pdF" kind="show" identifier="login" id="uNb-jc-8Wh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mayo-clinic-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUb-6J-h2y" userLabel="Image Viewer">
+                                <rect key="frame" x="54" y="54" width="266" height="310"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wbO-Mh-mur" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="225" id="5mz-kd-tre"/>
                             <constraint firstItem="3bM-vB-Rzi" firstAttribute="leading" secondItem="wbO-Mh-mur" secondAttribute="leading" id="6bI-ql-POT"/>
@@ -77,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H51-4P-9wz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="-359"/>
+            <point key="canvasLocation" x="676.5" y="-359.5"/>
         </scene>
         <!--PatientID View Controller-->
         <scene sceneID="SVF-5z-UEd">
@@ -91,20 +96,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayobg.png" translatesAutoresizingMaskIntoConstraints="NO" id="6dy-5e-lAX">
-                                <rect key="frame" x="-43" y="-43" width="424" height="715"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TeleVision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-gl-aWd">
                                 <rect key="frame" x="33" y="134" width="311" height="62"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="1ji-NN-Tet"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient ID" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1an-4s-lgD">
                                 <rect key="frame" x="78" y="263" width="220" height="37"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="l1k-eP-PF9"/>
@@ -114,6 +118,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-tM-oFe">
                                 <rect key="frame" x="163" y="314" width="51" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="rlf-pu-EoR"/>
                                 </constraints>
@@ -126,6 +131,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-9n-umm">
                                 <rect key="frame" x="303" y="20" width="56" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="7Yd-WF-sLb"/>
                                 </constraints>
@@ -138,15 +144,21 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter a Patient ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-3r-Ujj">
                                 <rect key="frame" x="66" y="194" width="244" height="51"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="kbb-o8-0PN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="6dy-5e-lAX">
+                                <rect key="frame" x="91" y="502" width="195" height="145"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803926" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6dy-5e-lAX" secondAttribute="trailing" constant="-22" id="7OQ-gf-ZqE"/>
                             <constraint firstItem="80G-tM-oFe" firstAttribute="centerX" secondItem="Z5f-gl-aWd" secondAttribute="centerX" id="KyS-7Y-UDa"/>
@@ -173,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvN-he-svq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452.5" y="-391.5"/>
+            <point key="canvasLocation" x="1456.5" y="-393.5"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="Gv4-ZM-gT8">
@@ -187,11 +199,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayobg.png" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-yl-p0z">
-                                <rect key="frame" x="0.0" y="-8" width="380" height="680"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-wT-MDm">
                                 <rect key="frame" x="308" y="20" width="51" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="sj9-oI-oid"/>
                                 </constraints>
@@ -204,15 +214,18 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoTelevision.png" translatesAutoresizingMaskIntoConstraints="NO" id="p56-PC-bPo">
                                 <rect key="frame" x="70" y="58" width="240" height="66"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please answer the following questions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-U9-eIB">
                                 <rect key="frame" x="27" y="110" width="326" height="47"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-wR-XF4">
                                 <rect key="frame" x="161" y="20" width="59" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,15 +234,16 @@
                                     <segue destination="59T-ye-Re7" kind="show" identifier="toPhoto" id="57B-i7-jwO"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-bb-gFz">
+                                <rect key="frame" x="90" y="502" width="195" height="145"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TM8-yl-p0z" secondAttribute="trailing" constant="-21" id="GmZ-2i-PxJ"/>
-                            <constraint firstItem="TM8-yl-p0z" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leading" id="IIS-cT-PMD"/>
-                            <constraint firstItem="TM8-yl-p0z" firstAttribute="top" secondItem="bgr-uc-f9n" secondAttribute="topMargin" constant="-8" id="Xq4-Jh-gbM"/>
                             <constraint firstItem="Tn5-wT-MDm" firstAttribute="trailing" secondItem="bgr-uc-f9n" secondAttribute="trailingMargin" id="Zoa-2r-v3W"/>
                             <constraint firstItem="Tn5-wT-MDm" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" id="e9r-8G-jlK"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="TM8-yl-p0z" secondAttribute="bottom" constant="-5" id="go8-hO-aVr"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -251,9 +265,11 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-IP-h3h">
                                 <rect key="frame" x="36" y="71" width="302" height="525"/>
+                                <animations/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-Bg-KEy">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <animations/>
                                 <items>
                                     <barButtonItem title="Logout" id="AcW-fS-2J0">
                                         <connections>
@@ -271,7 +287,8 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -285,9 +302,10 @@
     </scenes>
     <resources>
         <image name="logoTelevision.png" width="514" height="97"/>
-        <image name="mayobg.png" width="1600" height="1200"/>
+        <image name="mayo-clinic-logo.png" width="922" height="1024"/>
+        <image name="mayo-clinic-shield.png" width="687" height="529"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HeA-fI-iBg"/>
+        <segue reference="R0r-wu-C0T"/>
     </inferredMetricsTieBreakers>
 </document>
