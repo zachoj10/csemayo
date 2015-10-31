@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>95BDB340-090F-4E39-9EE3-AA60110E91F9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tele Vision</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1AD36470680479A72E2DE260893AE5734CC38BAA</key>
+		<string>https://github.com/zachoj10/csemayo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tele Vision.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1AD36470680479A72E2DE260893AE5734CC38BAA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zachoj10/csemayo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1AD36470680479A72E2DE260893AE5734CC38BAA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1AD36470680479A72E2DE260893AE5734CC38BAA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>csemayo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
