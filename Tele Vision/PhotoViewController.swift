@@ -39,20 +39,30 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     @IBAction func takePhoto(sender: UIBarButtonItem) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-        //if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
             let imagePicker = UIImagePickerController()
             
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-            //imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             imagePicker.mediaTypes = [kUTTypeImage as String]
             imagePicker.allowsEditing = false
             
             self.presentViewController(imagePicker, animated: true, completion: nil)
             
             newMedia = true
-            //newMedia = false
         }
+            
+        else if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                imagePicker.mediaTypes = [kUTTypeImage as String]
+                imagePicker.allowsEditing = false
+                
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+                
+                newMedia = false
+            }
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info:

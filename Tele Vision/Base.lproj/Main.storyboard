@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -179,18 +180,24 @@
                                     <segue destination="IBk-kp-piL" kind="show" identifier="logout" id="HeA-fI-iBg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoTelevision.png" translatesAutoresizingMaskIntoConstraints="NO" id="p56-PC-bPo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoTelevision.png" translatesAutoresizingMaskIntoConstraints="NO" id="p56-PC-bPo">
                                 <rect key="frame" x="70" y="58" width="240" height="66"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="rr3-kk-baT"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please answer the following questions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-U9-eIB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please answer the following questions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-U9-eIB">
                                 <rect key="frame" x="27" y="110" width="326" height="47"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="ysQ-iJ-gdE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-wR-XF4">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-wR-XF4">
                                 <rect key="frame" x="161" y="20" width="59" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit">
@@ -201,14 +208,31 @@
                                     <segue destination="59T-ye-Re7" kind="show" identifier="toPhoto" id="57B-i7-jwO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-bb-gFz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-bb-gFz">
                                 <rect key="frame" x="90" y="502" width="195" height="145"/>
                                 <animations/>
                                 <color key="tintColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="66P-15-VJH"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="Tn5-wT-MDm" secondAttribute="bottom" constant="8" symbolic="YES" id="4dQ-6k-PbA"/>
+                            <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="p56-PC-bPo" secondAttribute="centerX" id="LD8-rI-SmD"/>
+                            <constraint firstItem="nc3-U9-eIB" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leadingMargin" constant="11" id="Pya-nR-vws"/>
+                            <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="bgr-uc-f9n" secondAttribute="top" constant="58" id="a7b-vc-aWV"/>
+                            <constraint firstItem="Ima-bb-gFz" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leadingMargin" constant="74" id="bdF-pq-flK"/>
+                            <constraint firstItem="p56-PC-bPo" firstAttribute="centerX" secondItem="uHs-wR-XF4" secondAttribute="centerX" id="cAA-zm-vfu"/>
+                            <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="uHs-wR-XF4" secondAttribute="bottom" constant="8" symbolic="YES" id="fQu-em-XUq"/>
+                            <constraint firstItem="nc3-U9-eIB" firstAttribute="top" secondItem="uHs-wR-XF4" secondAttribute="bottom" constant="60" id="gIf-oa-KL0"/>
+                            <constraint firstAttribute="bottom" secondItem="Ima-bb-gFz" secondAttribute="bottom" constant="20" symbolic="YES" id="mkz-DT-zgG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p56-PC-bPo" secondAttribute="trailing" constant="49" id="uJx-Fd-WdO"/>
+                            <constraint firstItem="Ima-bb-gFz" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="uxt-2c-r3x"/>
+                            <constraint firstItem="p56-PC-bPo" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leadingMargin" constant="54" id="vng-kT-IT7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-eH-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>

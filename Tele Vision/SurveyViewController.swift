@@ -9,9 +9,13 @@
 import UIKit
 
 class SurveyViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+
         
         getJson()
 
@@ -69,13 +73,19 @@ class SurveyViewController: UIViewController {
                     
                     //get jsonfile.form.questions 1st element (starts at 0)
                 
-                    let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 450))
+                    let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 300))
                     scrollView.backgroundColor = UIColor.clearColor()
                     scrollView.scrollEnabled = true
                     scrollView.showsVerticalScrollIndicator = true
                     
                     let realJson = jsonObj["form"]["questions"]
-                    print (realJson[0])
+                    
+                    let contentHeight = Float(realJson.count) * 70 + 10;
+                    let contentHeightClean = CGFloat(contentHeight);
+                    
+                    scrollView.contentSize = CGSizeMake(350, contentHeightClean);
+
+                    //print (realJson[0])
                     let swiftColor = UIColor(red: 15/255, green: 78/255, blue: 157/255, alpha: 1)
                     for i in 0...realJson.count - 1{
                         let text = realJson[i]["question"]["fieldLabel"]
