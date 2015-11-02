@@ -24,6 +24,7 @@
 		92F8FD4F1B9FA88D0099300A /* PatientIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */; };
 		C940ACF01BE519D00019802B /* mayo-clinic-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C940ACEF1BE519D00019802B /* mayo-clinic-logo.png */; };
 		C940ACF21BE51F290019802B /* mayo-clinic-shield.png in Resources */ = {isa = PBXBuildFile; fileRef = C940ACF11BE51F290019802B /* mayo-clinic-shield.png */; };
+		C96EB6991BE7EBB500DC7A5D /* mayo_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = C96EB6981BE7EBB500DC7A5D /* mayo_splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientIDViewController.swift; sourceTree = "<group>"; };
 		C940ACEF1BE519D00019802B /* mayo-clinic-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mayo-clinic-logo.png"; sourceTree = SOURCE_ROOT; };
 		C940ACF11BE51F290019802B /* mayo-clinic-shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mayo-clinic-shield.png"; sourceTree = SOURCE_ROOT; };
+		C96EB6981BE7EBB500DC7A5D /* mayo_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mayo_splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		92D4E67E1B9E47E700430D3E /* Tele Vision */ = {
 			isa = PBXGroup;
 			children = (
+				C96EB6981BE7EBB500DC7A5D /* mayo_splash.png */,
 				C940ACF11BE51F290019802B /* mayo-clinic-shield.png */,
 				C940ACEF1BE519D00019802B /* mayo-clinic-logo.png */,
 				92724B8B1BBCD2B0003969A2 /* pro.json */,
@@ -234,6 +237,7 @@
 				92D4E68B1B9E47E700430D3E /* Main.storyboard in Resources */,
 				C940ACF21BE51F290019802B /* mayo-clinic-shield.png in Resources */,
 				92D4E6901B9E47E700430D3E /* LaunchScreen.xib in Resources */,
+				C96EB6991BE7EBB500DC7A5D /* mayo_splash.png in Resources */,
 				92D4E68D1B9E47E700430D3E /* Images.xcassets in Resources */,
 				92724B8C1BBCD2B0003969A2 /* pro.json in Resources */,
 			);

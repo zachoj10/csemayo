@@ -76,6 +76,7 @@ class SurveyViewController: UIViewController {
                     
                     let realJson = jsonObj["form"]["questions"]
                     print (realJson[0])
+                    let swiftColor = UIColor(red: 15/255, green: 78/255, blue: 157/255, alpha: 1)
                     for i in 0...realJson.count - 1{
                         let text = realJson[i]["question"]["fieldLabel"]
                         //create a uitextview at coord (x=0,y=10) with width 300 and height 700
@@ -92,7 +93,7 @@ class SurveyViewController: UIViewController {
                         scrollView.addSubview(tempLabel)
                         
                         tempLabel.text = "\(text)"
-                        tempLabel.textColor = UIColor.whiteColor();
+                        tempLabel.textColor = swiftColor;
                         tempLabel.textAlignment = NSTextAlignment.Right
                     }
                     

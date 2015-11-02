@@ -204,6 +204,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-bb-gFz">
                                 <rect key="frame" x="90" y="502" width="195" height="145"/>
                                 <animations/>
+                                <color key="tintColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <animations/>
