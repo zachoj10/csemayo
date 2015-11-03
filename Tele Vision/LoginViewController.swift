@@ -27,8 +27,6 @@ class LoginViewController: UIViewController {
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
         
-        print (keyboardSize.height)
-        print( offset.height)
         
         if keyboardSize.height == offset.height {
             if self.view.frame.origin.y == 0 {

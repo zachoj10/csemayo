@@ -271,7 +271,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="aVW-A3-KZr"/>
-                                    <barButtonItem systemItem="save" id="9k6-f9-ygA"/>
+                                    <barButtonItem systemItem="save" id="9k6-f9-ygA">
+                                        <connections>
+                                            <segue destination="1CL-eR-2KA" kind="show" id="4Cy-1r-n1n"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -286,6 +290,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLj-kg-8ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2771.5" y="-411.5"/>
+        </scene>
+        <!--Summary View Controller-->
+        <scene sceneID="dIg-yc-1F6">
+            <objects>
+                <viewController id="1CL-eR-2KA" customClass="SummaryViewController" customModule="Tele_Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o2P-c4-bBf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohT-q1-XQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GKK-BR-hby" customClass="Sure">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
+                                <rect key="frame" x="90" y="496" width="195" height="145"/>
+                                <animations/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="leading" secondItem="GKK-BR-hby" secondAttribute="leadingMargin" constant="74" id="2k2-PV-Cdu"/>
+                            <constraint firstItem="ohT-q1-XQR" firstAttribute="top" secondItem="Rf6-yS-xDC" secondAttribute="bottom" constant="26" id="4RT-xN-d8E"/>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="centerX" secondItem="GKK-BR-hby" secondAttribute="centerX" id="Hji-cf-eW2"/>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="top" secondItem="o2P-c4-bBf" secondAttribute="bottom" constant="476" id="h8c-6e-plz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2T-40-NBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3357" y="-427"/>
         </scene>
     </scenes>
     <resources>

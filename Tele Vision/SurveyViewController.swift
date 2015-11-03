@@ -10,11 +10,11 @@ import UIKit
 
 class SurveyViewController: UIViewController {
     
+    var textfields = [UITextField]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
 
         
         getJson()
@@ -42,9 +42,20 @@ class SurveyViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        var fieldArrays = [[String]]()
        
         let dest = segue.destinationViewController as! PhotoViewController
         //dest.name = name.text!
+        
+        for i in 0...textfields.count - 1{
+            let unrwappedI : String! = textfields[i].text
+            let label: String! = textfields[i].placeholder
+            fieldArrays.append([unrwappedI, label])
+            
+        }
+        
+        dest.toPass = fieldArrays
         
         
         // Get the new view controller using segue.destinationViewController.
@@ -100,6 +111,7 @@ class SurveyViewController: UIViewController {
                         
                             //put the json in var realJson you just gathered, into the uitextview you created
                             tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
+                            textfields.append(tempText);
                         }
                         
                         else if realJson[i]["question"]["type"] == "textarea" {

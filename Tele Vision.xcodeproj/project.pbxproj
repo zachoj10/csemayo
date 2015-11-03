@@ -11,6 +11,7 @@
 		925418711BA0DA29007D2F96 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925418701BA0DA29007D2F96 /* PhotoViewController.swift */; };
 		92724B8C1BBCD2B0003969A2 /* pro.json in Resources */ = {isa = PBXBuildFile; fileRef = 92724B8B1BBCD2B0003969A2 /* pro.json */; };
 		92724B8E1BBCD2DE003969A2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92724B8D1BBCD2DE003969A2 /* SwiftyJSON.swift */; };
+		9299193A1BE889B300BB5BD9 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929919391BE889B300BB5BD9 /* SummaryViewController.swift */; };
 		92D4E6821B9E47E700430D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4E6811B9E47E700430D3E /* AppDelegate.swift */; };
 		92D4E6861B9E47E700430D3E /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4E6851B9E47E700430D3E /* DataViewController.swift */; };
 		92D4E6881B9E47E700430D3E /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4E6871B9E47E700430D3E /* ModelController.swift */; };
@@ -42,6 +43,7 @@
 		925418701BA0DA29007D2F96 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92724B8B1BBCD2B0003969A2 /* pro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pro.json; sourceTree = "<group>"; };
 		92724B8D1BBCD2DE003969A2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		929919391BE889B300BB5BD9 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		92D4E67C1B9E47E700430D3E /* Tele Vision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tele Vision.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D4E6801B9E47E700430D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D4E6811B9E47E700430D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				92D4E68C1B9E47E700430D3E /* Images.xcassets */,
 				92D4E68E1B9E47E700430D3E /* LaunchScreen.xib */,
 				92D4E67F1B9E47E700430D3E /* Supporting Files */,
+				929919391BE889B300BB5BD9 /* SummaryViewController.swift */,
 			);
 			path = "Tele Vision";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				925418711BA0DA29007D2F96 /* PhotoViewController.swift in Sources */,
 				92F8FD4D1B9FA8830099300A /* LoginViewController.swift in Sources */,
 				92D4E6821B9E47E700430D3E /* AppDelegate.swift in Sources */,
+				9299193A1BE889B300BB5BD9 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

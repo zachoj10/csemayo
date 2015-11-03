@@ -14,10 +14,13 @@ import MobileCoreServices
 class PhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var name = ""
+    
+    var toPass:[[String]]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(name, terminator: "")
+        
 
         // Do any additional setup after loading the view.
     }
@@ -108,14 +111,19 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let dest = segue.destinationViewController as! SummaryViewController
+        
+        dest.patientInfo = toPass
+
+        
     }
-    */
+
 
 }
