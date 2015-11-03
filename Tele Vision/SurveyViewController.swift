@@ -89,15 +89,38 @@ class SurveyViewController: UIViewController {
                     let swiftColor = UIColor(red: 15/255, green: 78/255, blue: 157/255, alpha: 1)
                     for i in 0...realJson.count - 1{
                         let text = realJson[i]["question"]["fieldLabel"]
-                        //create a uitextview at coord (x=0,y=10) with width 300 and height 700
-                        let tempText = UITextField(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 30))
+
+                        if realJson[i]["question"]["type"] == "textfield"{
+                            //create a uitextview at coord (x=0,y=10) with width 300 and height 700
+                            let tempText = UITextField(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 30))
                         
-                        tempText.backgroundColor = UIColor.whiteColor();
-                        //add uitextview to main view
-                        scrollView.addSubview(tempText)
+                            tempText.backgroundColor = UIColor.whiteColor();
+                            //add uitextview to main view
+                            scrollView.addSubview(tempText)
                         
-                        //put the json in var realJson you just gathered, into the uitextview you created
-                        tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
+                            //put the json in var realJson you just gathered, into the uitextview you created
+                            tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
+                        }
+                        
+                        else if realJson[i]["question"]["type"] == "textarea" {
+                            //create a uitextview at coord (x=0,y=10) with width 300 and height 700
+                            let tempText = UITextView(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 60))
+                            
+                            
+                            tempText.backgroundColor = UIColor.whiteColor();
+                            //add uitextview to main view
+                            scrollView.addSubview(tempText)
+                            
+                            //put the json in var realJson you just gathered, into the uitextview you created
+                            //tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
+                        }
+                        
+                        else if realJson[i]["question"]["type"] == "dropdown" {
+                            let tempPicker = UIPickerView(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 30))
+                            
+                            
+                            scrollView.addSubview(tempPicker)
+                        }
                         
                         let tempLabel = UILabel(frame: CGRectMake(10, 10 + 60 * CGFloat(i), 100, 30))
                         scrollView.addSubview(tempLabel)
