@@ -86,12 +86,12 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
             
             imageView.image = image
             
-            if (newMedia == true) {
+            /*if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self,
                     "image:didFinishSavingWithError:contextInfo:", nil)
             } else if mediaType == (kUTTypeMovie as String) {
                 // Code to support video here
-            }
+            }*/
             
         }
     }

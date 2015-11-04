@@ -19,7 +19,6 @@ class SummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print (patientInfo)
         
         displayInfo()
 

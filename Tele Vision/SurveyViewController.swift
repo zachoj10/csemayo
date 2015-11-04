@@ -27,7 +27,6 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         
         getJson()
         
-        print (textAreas)
         
         
 
@@ -73,7 +72,6 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
             fieldArrays.append([unwrappedI, buttonFieldlabels[i]])
         }
         
-        print (textAreas.count)
         
         for i in 0...textAreas.count - 1 {
             let unwrappedI : String! = textAreas[i].text
