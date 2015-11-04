@@ -8,9 +8,11 @@
 
 import UIKit
 
-class SurveyViewController: UIViewController {
+class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
     
     var textfields = [UITextField]()
+    
+    var radioButtonController: SSRadioButtonsController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,9 @@ class SurveyViewController: UIViewController {
 
         
         getJson()
+        
+        let backItem = UIBarButtonItem(title: "Back", style: .Bordered, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backItem
 
         // Do any additional setup after loading the view.
     }
@@ -128,10 +133,24 @@ class SurveyViewController: UIViewController {
                         }
                         
                         else if realJson[i]["question"]["type"] == "dropdown" {
-                            let tempPicker = UIPickerView(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 30))
+                            var button1 = UIButton()
+                            button1.frame = CGRectMake(100,100, 100, 50)
                             
+                            button1.backgroundColor = UIColor.greenColor()
+                            button1.setTitle("Test Button", forState: UIControlState.Normal)
                             
-                            scrollView.addSubview(tempPicker)
+                            var button2 = UIButton()
+                            
+                            button2.frame = CGRectMake(100, 150, 100, 50)
+                            button2.backgroundColor = UIColor.grayColor()
+                            button2.setTitle("Test Button 2", forState: UIControlState.Normal)
+                            
+                            radioButtonController = SSRadioButtonsController(buttons: button1, button2)
+                            radioButtonController!.delegate = self
+                            radioButtonController!.shouldLetDeSelect = true
+                            
+                            scrollView.addSubview(button1)
+                            scrollView.addSubview(button2)
                         }
                         
                         let tempLabel = UILabel(frame: CGRectMake(10, 10 + 60 * CGFloat(i), 100, 30))
@@ -154,6 +173,6 @@ class SurveyViewController: UIViewController {
             }
         }
     }
-
+    
 
 }
