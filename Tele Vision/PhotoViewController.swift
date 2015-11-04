@@ -16,10 +16,14 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     var name = ""
     
     var toPass:[[String]]!
+    
+    var image:UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(name, terminator: "")
+        
+
         
 
         // Do any additional setup after loading the view.
@@ -76,7 +80,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         self.dismissViewControllerAnimated(true, completion: nil)
         
         if mediaType == (kUTTypeImage as String) {
-            let image = info[UIImagePickerControllerOriginalImage]
+            image = info[UIImagePickerControllerOriginalImage]
                 as! UIImage
             
             imageView.image = image
@@ -121,6 +125,8 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         let dest = segue.destinationViewController as! SummaryViewController
         
         dest.patientInfo = toPass
+        
+        dest.patientImg = image
 
         
     }
