@@ -62,6 +62,8 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         
         dest.toPass = fieldArrays
         
+        print(radioButtonController?.selectedButton()?.titleLabel?.text)
+        
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -96,19 +98,24 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                     
                     let realJson = jsonObj["form"]["questions"]
                     
-                    let contentHeight = Float(realJson.count) * 70 + 10;
-                    let contentHeightClean = CGFloat(contentHeight);
                     
-                    scrollView.contentSize = CGSizeMake(350, contentHeightClean);
+                    var startingHeight = CGFloat(0.0)
+                    
+                    
+//                    let contentHeight = Float(realJson.count) * 70 + 10;
+                    
 
                     //print (realJson[0])
                     let swiftColor = UIColor(red: 15/255, green: 78/255, blue: 157/255, alpha: 1)
                     for i in 0...realJson.count - 1{
                         let text = realJson[i]["question"]["fieldLabel"]
+                        
+                        let labelHeight = startingHeight
+
 
                         if realJson[i]["question"]["type"] == "textfield"{
                             //create a uitextview at coord (x=0,y=10) with width 300 and height 700
-                            let tempText = UITextField(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 30))
+                            let tempText = UITextField(frame: CGRectMake(120, 10.0 + startingHeight, 200, 30))
                         
                             tempText.backgroundColor = UIColor.whiteColor();
                             //add uitextview to main view
@@ -121,44 +128,78 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                         
                         else if realJson[i]["question"]["type"] == "textarea" {
                             //create a uitextview at coord (x=0,y=10) with width 300 and height 700
-                            let tempText = UITextView(frame: CGRectMake(120, 10 + 60 * CGFloat(i), 200, 60))
+                            let tempText = UITextView(frame: CGRectMake(120, 10.0 + startingHeight, 200, 60))
                             
                             
                             tempText.backgroundColor = UIColor.whiteColor();
                             //add uitextview to main view
                             scrollView.addSubview(tempText)
                             
+                            startingHeight += 30.0
+                            
                             //put the json in var realJson you just gathered, into the uitextview you created
                             //tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
                         }
                         
                         else if realJson[i]["question"]["type"] == "dropdown" {
-                            var button1 = UIButton()
-                            button1.frame = CGRectMake(100,100, 100, 50)
+                            let buttonOptions = realJson[i]["question"]["choices"]
+                            
+                            print (buttonOptions[0]["choice"])
+                            
+                            var buttons = [SSRadioButton]()
+                            
+                            radioButtonController = SSRadioButtonsController()
+                            radioButtonController!.delegate = self
+                            radioButtonController!.shouldLetDeSelect = true
+                            
+                            for j in 0...buttonOptions.count - 1{
+                                
+                                let text = buttonOptions[j]["choice"]
+                                
+                                let tempButton = SSRadioButton()
+                                tempButton.frame = CGRectMake(120 , 10.0 + startingHeight, 200, 30)
+                                startingHeight += 40.0
+                                
+                                tempButton.backgroundColor = UIColor.grayColor()
+                                tempButton.setTitle("\(text)", forState: UIControlState.Normal)
+                                buttons.append(tempButton)
+                                
+                                radioButtonController?.addButton(tempButton)
+                                
+                                scrollView.addSubview(tempButton)
+
+                            }
+                            
+                            startingHeight -= 40.0
+                            
+                            /*let button1 = SSRadioButton()
+                            button1.frame = CGRectMake(120 , 10.0 + startingHeight, 200, 30)
+                            startingHeight += 40.0
                             
                             button1.backgroundColor = UIColor.greenColor()
                             button1.setTitle("Test Button", forState: UIControlState.Normal)
                             
-                            var button2 = UIButton()
+                            let button2 = SSRadioButton()
                             
-                            button2.frame = CGRectMake(100, 150, 100, 50)
+                            button2.frame = CGRectMake(120, 10.0 + startingHeight, 200, 30)
                             button2.backgroundColor = UIColor.grayColor()
-                            button2.setTitle("Test Button 2", forState: UIControlState.Normal)
+                            button2.setTitle("Test Button 2", forState: UIControlState.Normal)*/                            
                             
-                            radioButtonController = SSRadioButtonsController(buttons: button1, button2)
-                            radioButtonController!.delegate = self
-                            radioButtonController!.shouldLetDeSelect = true
-                            
-                            scrollView.addSubview(button1)
-                            scrollView.addSubview(button2)
                         }
                         
-                        let tempLabel = UILabel(frame: CGRectMake(10, 10 + 60 * CGFloat(i), 100, 30))
+                        startingHeight += 70.0
+                        
+                        let tempLabel = UILabel(frame: CGRectMake(10, 10.0 + labelHeight, 100, 30))
                         scrollView.addSubview(tempLabel)
                         
                         tempLabel.text = "\(text)"
                         tempLabel.textColor = swiftColor;
                         tempLabel.textAlignment = NSTextAlignment.Right
+                        
+                        let contentHeightClean = CGFloat(startingHeight);
+                        scrollView.contentSize = CGSizeMake(350, contentHeightClean);
+
+
                     }
                     
                     view.addSubview(scrollView)
