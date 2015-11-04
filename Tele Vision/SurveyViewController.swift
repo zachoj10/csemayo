@@ -68,12 +68,23 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         }
         
         for i in 0...buttonControllers.count - 1{
-            let unwrappedI : String! = buttonControllers[i]!.selectedButton()!.titleLabel!.text
+            var unwrappedI = String()
+            
+            let selected = buttonControllers[i]!.selectedButton()
+            
+            
+            if selected != nil{
+                unwrappedI = buttonControllers[i]!.selectedButton()!.titleLabel!.text!
+            }
+            else {
+                unwrappedI = ""
+            }
             fieldArrays.append([unwrappedI, buttonFieldlabels[i]])
         }
         
         
         for i in 0...textAreas.count - 1 {
+
             let unwrappedI : String! = textAreas[i].text
             AreaArrays.append([unwrappedI, textAreaLabels[i]])
         }
