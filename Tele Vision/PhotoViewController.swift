@@ -16,6 +16,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     var name = ""
     
     var toPass:[[String]]!
+    var passAreas:[[String]]!
     
     var image:UIImage!
 
@@ -127,6 +128,8 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         dest.patientInfo = toPass
         
         dest.patientImg = image
+        
+        dest.patientAreas = passAreas
 
         
     }

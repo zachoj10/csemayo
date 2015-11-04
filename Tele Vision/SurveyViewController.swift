@@ -12,7 +12,13 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
     
     var textfields = [UITextField]()
     
-    var radioButtonController: SSRadioButtonsController?
+    var textAreas = [UITextView]()
+    
+    var textAreaLabels = [String]()
+    
+    var buttonControllers = [SSRadioButtonsController?]()
+    
+    var buttonFieldlabels = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +27,9 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         
         getJson()
         
-        let backItem = UIBarButtonItem(title: "Back", style: .Bordered, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backItem
+        print (textAreas)
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -49,6 +56,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         var fieldArrays = [[String]]()
+        var AreaArrays = [[String]]()
        
         let dest = segue.destinationViewController as! PhotoViewController
         //dest.name = name.text!
@@ -60,9 +68,21 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
             
         }
         
-        dest.toPass = fieldArrays
+        for i in 0...buttonControllers.count - 1{
+            let unwrappedI : String! = buttonControllers[i]!.selectedButton()!.titleLabel!.text
+            fieldArrays.append([unwrappedI, buttonFieldlabels[i]])
+        }
         
-        print(radioButtonController?.selectedButton()?.titleLabel?.text)
+        print (textAreas.count)
+        
+        for i in 0...textAreas.count - 1 {
+            let unwrappedI : String! = textAreas[i].text
+            AreaArrays.append([unwrappedI, textAreaLabels[i]])
+        }
+        
+        dest.toPass = fieldArrays
+        dest.passAreas = AreaArrays
+        
         
         
         // Get the new view controller using segue.destinationViewController.
@@ -76,8 +96,8 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         if let path = NSBundle.mainBundle().pathForResource("pro", ofType: "json") {
             do {
                 
-                let urlPath =  NSURL(string: "https://dl.dropboxusercontent.com/u/9366248/pro.json")
-                
+                let urlPath =  NSURL(string: "https://www.dropbox.com/s/ud1akkco3jyxe1q/pro.json?dl=1")
+            
                 //read the json data into data var
                 let data = try NSData(contentsOfURL: urlPath!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 
@@ -100,6 +120,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                     
                     
                     var startingHeight = CGFloat(0.0)
+                    
                     
                     
 //                    let contentHeight = Float(realJson.count) * 70 + 10;
@@ -137,6 +158,11 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                             
                             startingHeight += 30.0
                             
+                            textAreas.append(tempText)
+                            
+                            textAreaLabels.append("\(text)")
+                            
+                            
                             //put the json in var realJson you just gathered, into the uitextview you created
                             //tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
                         }
@@ -144,12 +170,12 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                         else if realJson[i]["question"]["type"] == "dropdown" {
                             let buttonOptions = realJson[i]["question"]["choices"]
                             
-                            print (buttonOptions[0]["choice"])
-                            
                             var buttons = [SSRadioButton]()
                             
+                            var radioButtonController: SSRadioButtonsController?
+
+                            
                             radioButtonController = SSRadioButtonsController()
-                            radioButtonController!.delegate = self
                             radioButtonController!.shouldLetDeSelect = true
                             
                             for j in 0...buttonOptions.count - 1{
@@ -164,26 +190,20 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                                 tempButton.setTitle("\(text)", forState: UIControlState.Normal)
                                 buttons.append(tempButton)
                                 
-                                radioButtonController?.addButton(tempButton)
+                                radioButtonController!.addButton(tempButton)
+                                
                                 
                                 scrollView.addSubview(tempButton)
 
                             }
                             
+                            buttonFieldlabels.append("\(text)")
+                        
+                            
+                            buttonControllers.append(radioButtonController!)
+
+                            
                             startingHeight -= 40.0
-                            
-                            /*let button1 = SSRadioButton()
-                            button1.frame = CGRectMake(120 , 10.0 + startingHeight, 200, 30)
-                            startingHeight += 40.0
-                            
-                            button1.backgroundColor = UIColor.greenColor()
-                            button1.setTitle("Test Button", forState: UIControlState.Normal)
-                            
-                            let button2 = SSRadioButton()
-                            
-                            button2.frame = CGRectMake(120, 10.0 + startingHeight, 200, 30)
-                            button2.backgroundColor = UIColor.grayColor()
-                            button2.setTitle("Test Button 2", forState: UIControlState.Normal)*/                            
                             
                         }
                         
