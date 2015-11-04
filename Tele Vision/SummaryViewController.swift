@@ -31,6 +31,7 @@ class SummaryViewController: UIViewController {
     }
     
     func displayInfo(){
+        var pdfString = "<body>"
         let screenSize: CGRect = UIScreen.mainScreen().bounds
 
         let screenWidth = screenSize.width
@@ -75,6 +76,9 @@ class SummaryViewController: UIViewController {
             tempValue.textAlignment = NSTextAlignment.Left
             
             verticalPosition += 40.0
+            var newString = "<p>" + patientInfo[i][0]
+            newString += " " + patientInfo[i][1] + "</p>"
+            pdfString += newString
         }
         
         
@@ -99,10 +103,11 @@ class SummaryViewController: UIViewController {
             tempValue.editable = false
             
             verticalPosition += 70
+            pdfString += "<p>" + patientAreas[i][0] + "</p>"
             
         }
         
-        
+        pdfString += "</body>"
         
         let imgStart = Int(verticalPosition + 20.0)
         scrollView.contentSize = CGSizeMake(350, CGFloat(imgStart) + 220);
@@ -116,6 +121,33 @@ class SummaryViewController: UIViewController {
         
         
         view.addSubview(scrollView)
+        //from git user nyg
+        //via http://www.labs.saachitech.com/2012/10/23/pdf-generation-using-uiprintpagerenderer
+        
+        let fmt = UIMarkupTextPrintFormatter(markupText: pdfString)
+        
+        let render = UIPrintPageRenderer()
+        render.addPrintFormatter(fmt, startingAtPageAtIndex: 0)
+
+        let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8)
+        let printable = CGRectInset(page, 0, 0)
+        
+        render.setValue(NSValue(CGRect: page), forKey: "paperRect")
+        render.setValue(NSValue(CGRect: printable), forKey: "printableRect")
+        
+        let pdfData = NSMutableData()
+        UIGraphicsBeginPDFContextToData(pdfData, CGRectZero, nil)
+        
+        for i in 1...render.numberOfPages() {
+            
+            UIGraphicsBeginPDFPage();
+            let bounds = UIGraphicsGetPDFContextBounds()
+            render.drawPageAtIndex(i - 1, inRect: bounds)
+        }
+        
+        UIGraphicsEndPDFContext();
+        
+        pdfData.writeToFile("/patientRecord.pdf", atomically: true)
     }
     
 
