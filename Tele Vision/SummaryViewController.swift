@@ -123,6 +123,7 @@ class SummaryViewController: UIViewController {
         view.addSubview(scrollView)
         //from git user nyg
         //via http://www.labs.saachitech.com/2012/10/23/pdf-generation-using-uiprintpagerenderer
+        //Also used http://stackoverflow.com/questions/24097826/read-and-write-data-from-text-file
         
         let fmt = UIMarkupTextPrintFormatter(markupText: pdfString)
         
@@ -147,7 +148,23 @@ class SummaryViewController: UIViewController {
         
         UIGraphicsEndPDFContext();
         
-        pdfData.writeToFile("/patientRecord.pdf", atomically: true)
+        print ("here")
+        
+        pdfData.writeToFile("patientRecord.pdf", atomically: true)
+        
+        if let dir : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
+            let path = dir.stringByAppendingPathComponent("test.pdf")
+            let text = "Test"
+            
+            print (dir)
+            do {
+                try pdfData.writeToFile(path, atomically: true)
+            }
+        
+            catch {
+                print ("error")
+            }
+        }
     }
     
 
