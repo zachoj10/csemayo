@@ -217,16 +217,6 @@
                                     <constraint firstAttribute="height" constant="145" id="66P-15-VJH"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-it-eXY">
-                                <rect key="frame" x="275" y="289" width="49" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="59T-ye-Re7" kind="show" id="vwh-Um-rdp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7N-LC-2Jx">
                                 <rect key="frame" x="514" y="30" width="48" height="30"/>
                                 <animations/>
@@ -248,18 +238,28 @@
                                 <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-it-eXY">
+                                <rect key="frame" x="514" y="58" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="59T-ye-Re7" kind="show" id="vwh-Um-rdp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="VGY-it-eXY" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" constant="58" id="Bhl-za-cKI"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="p56-PC-bPo" secondAttribute="centerX" id="LD8-rI-SmD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M7N-LC-2Jx" secondAttribute="trailing" constant="18" id="MBS-GE-Ivj"/>
-                            <constraint firstItem="VGY-it-eXY" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="NA6-cI-TVi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VGY-it-eXY" secondAttribute="trailing" constant="17" id="Mbu-hC-rj3"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="bgr-uc-f9n" secondAttribute="top" constant="58" id="a7b-vc-aWV"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aQq-5b-hXB"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aaX-Vu-FGF"/>
                             <constraint firstItem="M7N-LC-2Jx" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" constant="30" id="fkf-mv-KCu"/>
-                            <constraint firstItem="Ima-bb-gFz" firstAttribute="top" secondItem="VGY-it-eXY" secondAttribute="bottom" constant="8" id="igk-vG-Rmg"/>
                             <constraint firstAttribute="bottom" secondItem="Ima-bb-gFz" secondAttribute="bottom" constant="20" symbolic="YES" id="mkz-DT-zgG"/>
                             <constraint firstItem="Ima-bb-gFz" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="uxt-2c-r3x"/>
                         </constraints>
@@ -299,11 +299,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="aVW-A3-KZr"/>
-                                    <barButtonItem systemItem="save" id="9k6-f9-ygA">
-                                        <connections>
-                                            <segue destination="1CL-eR-2KA" kind="show" id="4Cy-1r-n1n"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem systemItem="save" id="9k6-f9-ygA"/>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-IP-h3h">
@@ -319,6 +315,19 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems>
+                        <barButtonItem systemItem="camera" id="RGj-Cf-UpM">
+                            <connections>
+                                <action selector="takePhoto:" destination="59T-ye-Re7" id="fco-Fu-YO5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Vh2-pm-MBu"/>
+                        <barButtonItem title="Submit" id="CDB-r2-OWf">
+                            <connections>
+                                <segue destination="1CL-eR-2KA" kind="show" id="dZ5-fB-Gpz"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Take Photo" id="cGI-ej-Uhf"/>
                     <connections>
                         <outlet property="imageView" destination="Ewq-IP-h3h" id="Y61-2k-7gr"/>

@@ -108,8 +108,6 @@ class SummaryViewController: UIViewController {
             
         }
         
-        //pdfString += "<img src=\"" + patientImg + "\" alt = \"face\" height=\"42\" width=\"42\"</body>"
-        
         let imgStart = Int(verticalPosition + 20.0)
         scrollView.contentSize = CGSizeMake(350, CGFloat(imgStart) + 220);
 
