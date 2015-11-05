@@ -31,7 +31,7 @@ class SummaryViewController: UIViewController {
     }
     
     func displayInfo(){
-        var pdfString = "<body>"
+        var pdfString = "<body><h1 style=\"text-align:center\"><b>PATIENT RECORD OUTCOME</b></h1>"
         let screenSize: CGRect = UIScreen.mainScreen().bounds
 
         let screenWidth = screenSize.width
@@ -76,8 +76,8 @@ class SummaryViewController: UIViewController {
             tempValue.textAlignment = NSTextAlignment.Left
             
             verticalPosition += 40.0
-            var newString = "<p>" + patientInfo[i][0]
-            newString += " " + patientInfo[i][1] + "</p>"
+            var newString = "<p><b>" + patientInfo[i][1]
+            newString += ":</b> " + patientInfo[i][0] + "</p>"
             pdfString += newString
         }
         
@@ -103,11 +103,12 @@ class SummaryViewController: UIViewController {
             tempValue.editable = false
             
             verticalPosition += 70
-            pdfString += "<p>" + patientAreas[i][0] + "</p>"
+            pdfString += "<p><b>" + patientAreas[i][1]
+            pdfString += ":</b> " + patientAreas[i][0] + "</p>"
             
         }
         
-        pdfString += "</body>"
+        //pdfString += "<img src=\"" + patientImg + "\" alt = \"face\" height=\"42\" width=\"42\"</body>"
         
         let imgStart = Int(verticalPosition + 20.0)
         scrollView.contentSize = CGSizeMake(350, CGFloat(imgStart) + 220);
@@ -144,6 +145,9 @@ class SummaryViewController: UIViewController {
             UIGraphicsBeginPDFPage();
             let bounds = UIGraphicsGetPDFContextBounds()
             render.drawPageAtIndex(i - 1, inRect: bounds)
+            
+            var image = patientImg
+            image?.drawInRect(CGRectMake(100, 100, 100, 100))
         }
         
         UIGraphicsEndPDFContext();
