@@ -156,7 +156,7 @@ class PatientIDViewController: UIViewController {
                     return false
                 }
             }
-            return false
+            //return false
         }
         
         else if identifier == "logout" {

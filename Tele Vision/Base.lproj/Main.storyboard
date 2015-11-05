@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBk-kp-piL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9qd-T2-ibN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="J4h-PG-uMw">
             <objects>
                 <viewController id="IBk-kp-piL" customClass="LoginViewController" customModule="Tele_Vision" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="DQR-2X-UNk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aBW-MI-cJc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-Mh-mur">
-                                <rect key="frame" x="64" y="407" width="246" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-Mh-mur">
+                                <rect key="frame" x="177" y="343" width="246" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -29,10 +29,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-VG-1wg">
-                                <rect key="frame" x="153" y="535" width="65" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUb-6J-h2y" userLabel="Image Viewer">
+                                <rect key="frame" x="167" y="20" width="266" height="310"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="f52-vN-tIT"/>
+                                    <constraint firstAttribute="width" constant="266" id="zFr-fS-dvc"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3bM-vB-Rzi">
+                                <rect key="frame" x="177" y="400" width="246" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1mb-TC-Xzp"/>
+                                    <constraint firstAttribute="width" constant="246" id="6gc-rl-ZxT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-VG-1wg">
+                                <rect key="frame" x="268" y="442" width="65" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="1WN-tI-Ka2"/>
                                 </constraints>
@@ -43,25 +61,22 @@
                                     <segue destination="NGo-gt-pdF" kind="show" identifier="login" id="uNb-jc-8Wh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mayo-clinic-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUb-6J-h2y" userLabel="Image Viewer">
-                                <rect key="frame" x="54" y="54" width="266" height="310"/>
-                                <animations/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bM-vB-Rzi">
-                                <rect key="frame" x="64" y="467" width="246" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1mb-TC-Xzp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.92941176469999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Px-VG-1wg" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="B8A-xW-AKQ"/>
+                            <constraint firstItem="wbO-Mh-mur" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="343" id="DwY-Bw-y7Z"/>
+                            <constraint firstItem="wbO-Mh-mur" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="Ift-iM-btr"/>
+                            <constraint firstItem="wUb-6J-h2y" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="oT1-EU-Fs9"/>
+                            <constraint firstItem="DQR-2X-UNk" firstAttribute="top" secondItem="1Px-VG-1wg" secondAttribute="bottom" constant="36" id="piS-bF-e2C"/>
+                            <constraint firstItem="3bM-vB-Rzi" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="400" id="qdd-28-sfw"/>
+                            <constraint firstItem="wUb-6J-h2y" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="20" id="sVl-6s-Rlh"/>
+                            <constraint firstItem="3bM-vB-Rzi" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="wIJ-E0-EU3"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Login" id="MeS-Wi-sf8"/>
                     <connections>
                         <outlet property="password" destination="3bM-vB-Rzi" id="gl8-4D-rEu"/>
                         <outlet property="username" destination="wbO-Mh-mur" id="6sj-Ss-jog"/>
@@ -69,9 +84,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H51-4P-9wz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676.5" y="-359.5"/>
+            <point key="canvasLocation" x="1263.5" y="-359.5"/>
         </scene>
-        <!--PatientID View Controller-->
+        <!--Patient Select-->
         <scene sceneID="SVF-5z-UEd">
             <objects>
                 <viewController id="NGo-gt-pdF" customClass="PatientIDViewController" customModule="Tele_Vision" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,11 +95,11 @@
                         <viewControllerLayoutGuide type="bottom" id="x8f-Tt-9hc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NFP-IX-y8s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome to TeleVision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-gl-aWd">
-                                <rect key="frame" x="33" y="134" width="311" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TeleVision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-gl-aWd">
+                                <rect key="frame" x="151" y="67" width="299" height="62"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="1ji-NN-Tet"/>
@@ -93,18 +108,19 @@
                                 <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient ID" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1an-4s-lgD">
-                                <rect key="frame" x="78" y="263" width="220" height="37"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Patient ID" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1an-4s-lgD">
+                                <rect key="frame" x="190" y="195" width="220" height="37"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="l1k-eP-PF9"/>
+                                    <constraint firstAttribute="width" constant="220" id="zWM-KA-gbH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-tM-oFe">
-                                <rect key="frame" x="163" y="314" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-tM-oFe">
+                                <rect key="frame" x="275" y="261" width="51" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="rlf-pu-EoR"/>
@@ -116,21 +132,8 @@
                                     <segue destination="mbg-IM-WPz" kind="show" identifier="loadPatient" id="1yI-Qp-cLF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-9n-umm">
-                                <rect key="frame" x="303" y="20" width="56" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="7Yd-WF-sLb"/>
-                                </constraints>
-                                <state key="normal" title="Logout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="IBk-kp-piL" kind="show" identifier="logout" id="KcP-Mo-7vj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please Enter a Patient ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-3r-Ujj">
-                                <rect key="frame" x="66" y="194" width="244" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter a Patient ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-3r-Ujj">
+                                <rect key="frame" x="188" y="129" width="223.5" height="51"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="kbb-o8-0PN"/>
@@ -139,23 +142,54 @@
                                 <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="6dy-5e-lAX">
-                                <rect key="frame" x="91" y="502" width="195" height="145"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="6dy-5e-lAX">
+                                <rect key="frame" x="203" y="321" width="195" height="145"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="gbw-VT-qXY"/>
+                                    <constraint firstAttribute="width" constant="195" id="lVU-9q-j83"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-9n-umm">
+                                <rect key="frame" x="481" y="30" width="56" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.023529411764705882" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9qd-T2-ibN" kind="show" identifier="logout" id="KcP-Mo-7vj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803926" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ghr-3r-Ujj" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="129" id="53I-Qz-JUF"/>
+                            <constraint firstItem="6dy-5e-lAX" firstAttribute="top" secondItem="80G-tM-oFe" secondAttribute="bottom" constant="30" id="6Ol-iW-JHO"/>
+                            <constraint firstItem="1an-4s-lgD" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="195" id="GvF-7U-FXH"/>
+                            <constraint firstItem="ghr-3r-Ujj" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="QwI-hk-BaS"/>
+                            <constraint firstItem="Z5f-gl-aWd" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="67" id="TPU-hi-s0M"/>
+                            <constraint firstItem="x8f-Tt-9hc" firstAttribute="top" secondItem="6dy-5e-lAX" secondAttribute="bottom" constant="26" id="Ytm-ay-JHk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wsh-9n-umm" secondAttribute="trailing" constant="43" id="gej-CS-fQo"/>
+                            <constraint firstItem="1an-4s-lgD" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="inH-C1-Rpy"/>
+                            <constraint firstItem="6dy-5e-lAX" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="mIP-T2-1k3"/>
+                            <constraint firstItem="Z5f-gl-aWd" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="nsm-2M-Fha"/>
+                            <constraint firstItem="80G-tM-oFe" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="oX9-Da-LyT"/>
+                            <constraint firstItem="wsh-9n-umm" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="31" id="xYZ-5O-Mq0"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Patient Select" id="KkC-qt-apu"/>
                     <connections>
                         <outlet property="patientID" destination="1an-4s-lgD" id="0JH-dR-dxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvN-he-svq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.5" y="-393.5"/>
+            <point key="canvasLocation" x="2043" y="-394"/>
         </scene>
-        <!--Survey View Controller-->
+        <!--Patient Info Form-->
         <scene sceneID="Gv4-ZM-gT8">
             <objects>
                 <viewController id="mbg-IM-WPz" customClass="SurveyViewController" customModule="Tele_Vision" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,31 +198,48 @@
                         <viewControllerLayoutGuide type="bottom" id="19b-bC-2wr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bgr-uc-f9n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-wT-MDm">
-                                <rect key="frame" x="308" y="20" width="51" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="sj9-oI-oid"/>
-                                </constraints>
-                                <state key="normal" title="Logout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="IBk-kp-piL" kind="show" identifier="logout" id="HeA-fI-iBg"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoTelevision.png" translatesAutoresizingMaskIntoConstraints="NO" id="p56-PC-bPo">
-                                <rect key="frame" x="70" y="58" width="240" height="66"/>
+                                <rect key="frame" x="43" y="58" width="514" height="66"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="rr3-kk-baT"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please answer the following questions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-U9-eIB">
-                                <rect key="frame" x="27" y="110" width="326" height="47"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-bb-gFz">
+                                <rect key="frame" x="94" y="327" width="412" height="145"/>
+                                <animations/>
+                                <color key="tintColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="412" id="46J-Fy-QqF"/>
+                                    <constraint firstAttribute="height" constant="145" id="66P-15-VJH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-it-eXY">
+                                <rect key="frame" x="275" y="289" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="59T-ye-Re7" kind="show" id="vwh-Um-rdp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7N-LC-2Jx">
+                                <rect key="frame" x="514" y="30" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.023529411760000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9qd-T2-ibN" kind="show" id="45E-AY-PFb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please answer the following questions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-U9-eIB">
+                                <rect key="frame" x="29" y="125" width="543" height="47"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="ysQ-iJ-gdE"/>
@@ -197,51 +248,30 @@
                                 <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-wR-XF4">
-                                <rect key="frame" x="161" y="20" width="59" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="59T-ye-Re7" kind="popoverPresentation" identifier="toPhoto" popoverAnchorView="uHs-wR-XF4" id="57B-i7-jwO">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-bb-gFz">
-                                <rect key="frame" x="90" y="502" width="195" height="145"/>
-                                <animations/>
-                                <color key="tintColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="66P-15-VJH"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="Tn5-wT-MDm" secondAttribute="bottom" constant="8" symbolic="YES" id="4dQ-6k-PbA"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="p56-PC-bPo" secondAttribute="centerX" id="LD8-rI-SmD"/>
-                            <constraint firstItem="nc3-U9-eIB" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leadingMargin" constant="11" id="Pya-nR-vws"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M7N-LC-2Jx" secondAttribute="trailing" constant="18" id="MBS-GE-Ivj"/>
+                            <constraint firstItem="VGY-it-eXY" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="NA6-cI-TVi"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="bgr-uc-f9n" secondAttribute="top" constant="58" id="a7b-vc-aWV"/>
-                            <constraint firstItem="Ima-bb-gFz" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leadingMargin" constant="74" id="bdF-pq-flK"/>
-                            <constraint firstItem="p56-PC-bPo" firstAttribute="centerX" secondItem="uHs-wR-XF4" secondAttribute="centerX" id="cAA-zm-vfu"/>
-                            <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="uHs-wR-XF4" secondAttribute="bottom" constant="8" symbolic="YES" id="fQu-em-XUq"/>
-                            <constraint firstItem="nc3-U9-eIB" firstAttribute="top" secondItem="uHs-wR-XF4" secondAttribute="bottom" constant="60" id="gIf-oa-KL0"/>
+                            <constraint firstItem="p56-PC-bPo" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aQq-5b-hXB"/>
+                            <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aaX-Vu-FGF"/>
+                            <constraint firstItem="M7N-LC-2Jx" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" constant="30" id="fkf-mv-KCu"/>
+                            <constraint firstItem="Ima-bb-gFz" firstAttribute="top" secondItem="VGY-it-eXY" secondAttribute="bottom" constant="8" id="igk-vG-Rmg"/>
                             <constraint firstAttribute="bottom" secondItem="Ima-bb-gFz" secondAttribute="bottom" constant="20" symbolic="YES" id="mkz-DT-zgG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p56-PC-bPo" secondAttribute="trailing" constant="49" id="uJx-Fd-WdO"/>
                             <constraint firstItem="Ima-bb-gFz" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="uxt-2c-r3x"/>
-                            <constraint firstItem="p56-PC-bPo" firstAttribute="leading" secondItem="bgr-uc-f9n" secondAttribute="leadingMargin" constant="54" id="vng-kT-IT7"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Patient Info Form" id="wmP-Qb-4Ue"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-eH-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196.5" y="-400.5"/>
+            <point key="canvasLocation" x="2783" y="-401"/>
         </scene>
-        <!--Photo View Controller-->
+        <!--Take Photo-->
         <scene sceneID="NzT-fV-QF6">
             <objects>
                 <viewController id="59T-ye-Re7" customClass="PhotoViewController" customModule="Tele_Vision" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,20 +280,16 @@
                         <viewControllerLayoutGuide type="bottom" id="dub-xh-ixp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hkT-xN-Ac8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-IP-h3h">
-                                <rect key="frame" x="36" y="71" width="302" height="525"/>
-                                <animations/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-Bg-KEy">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <animations/>
                                 <items>
                                     <barButtonItem title="Logout" id="AcW-fS-2J0">
                                         <connections>
-                                            <segue destination="IBk-kp-piL" kind="show" id="R0r-wu-C0T"/>
+                                            <segue destination="9qd-T2-ibN" kind="show" id="R0r-wu-C0T"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="wuu-jj-GVP"/>
@@ -280,20 +306,29 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-IP-h3h">
+                                <rect key="frame" x="77" y="35" width="447" height="422"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ewq-IP-h3h" firstAttribute="centerX" secondItem="hkT-xN-Ac8" secondAttribute="centerX" id="7JQ-cY-nHK"/>
+                            <constraint firstItem="Ewq-IP-h3h" firstAttribute="centerY" secondItem="hkT-xN-Ac8" secondAttribute="centerY" id="gaK-x2-hTo"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Take Photo" id="cGI-ej-Uhf"/>
                     <connections>
                         <outlet property="imageView" destination="Ewq-IP-h3h" id="Y61-2k-7gr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLj-kg-8ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2771.5" y="-411.5"/>
+            <point key="canvasLocation" x="3479" y="-419"/>
         </scene>
-        <!--Summary View Controller-->
+        <!--Summary-->
         <scene sceneID="dIg-yc-1F6">
             <objects>
                 <viewController id="1CL-eR-2KA" customClass="SummaryViewController" customModule="Tele_Vision" customModuleProvider="target" sceneMemberID="viewController">
@@ -301,12 +336,12 @@
                         <viewControllerLayoutGuide type="top" id="o2P-c4-bBf"/>
                         <viewControllerLayoutGuide type="bottom" id="ohT-q1-XQR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GKK-BR-hby" customClass="Sure">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="GKK-BR-hby">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
-                                <rect key="frame" x="90" y="496" width="195" height="145"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
+                                <rect key="frame" x="209" y="436" width="183" height="138"/>
                                 <animations/>
                                 <color key="tintColor" red="0.058823529409999999" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -319,16 +354,41 @@
                         <animations/>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="leading" secondItem="GKK-BR-hby" secondAttribute="leadingMargin" constant="74" id="2k2-PV-Cdu"/>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="leading" secondItem="GKK-BR-hby" secondAttribute="leadingMargin" constant="189" id="2k2-PV-Cdu"/>
                             <constraint firstItem="ohT-q1-XQR" firstAttribute="top" secondItem="Rf6-yS-xDC" secondAttribute="bottom" constant="26" id="4RT-xN-d8E"/>
                             <constraint firstItem="Rf6-yS-xDC" firstAttribute="centerX" secondItem="GKK-BR-hby" secondAttribute="centerX" id="Hji-cf-eW2"/>
-                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="top" secondItem="o2P-c4-bBf" secondAttribute="bottom" constant="476" id="h8c-6e-plz"/>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="top" secondItem="o2P-c4-bBf" secondAttribute="bottom" constant="416" id="h8c-6e-plz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Summary" id="Qqy-QU-NJ3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2T-40-NBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3357" y="-427"/>
+            <point key="canvasLocation" x="4182" y="-432"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a90-Z5-hRF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="9qd-T2-ibN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NbO-YI-y0p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zNk-lJ-eD8">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="IBk-kp-piL" kind="relationship" relationship="rootViewController" id="xXE-nL-BUl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r19-Bf-C4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2783" y="414"/>
         </scene>
     </scenes>
     <resources>
@@ -337,6 +397,6 @@
         <image name="mayo-clinic-shield.png" width="687" height="529"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HeA-fI-iBg"/>
+        <segue reference="R0r-wu-C0T"/>
     </inferredMetricsTieBreakers>
 </document>
