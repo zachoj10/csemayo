@@ -145,7 +145,7 @@ class SummaryViewController: UIViewController {
             render.drawPageAtIndex(i - 1, inRect: bounds)
             
             var image = patientImg
-            image?.drawInRect(CGRectMake(100, 100, 100, 100))
+            image?.drawInRect(CGRectMake(300, 300, 100, 100))
         }
         
         UIGraphicsEndPDFContext();
