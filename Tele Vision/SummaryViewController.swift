@@ -33,7 +33,7 @@ class SummaryViewController: UIViewController {
         let screenSize: CGRect = UIScreen.mainScreen().bounds
 
         let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
+        //let screenHeight = screenSize.height
         
         let middleScreen = screenWidth * 0.5;
         

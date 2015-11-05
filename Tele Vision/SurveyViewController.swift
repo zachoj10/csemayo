@@ -21,7 +21,9 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         
         getJson()
         
-        let backItem = UIBarButtonItem(title: "Back", style: .Bordered, target: nil, action: nil)
+        //let backItem = UIBarButtonItem(title: "Back", style: .Bordered, target: nil, action: nil)
+        let backItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+
         navigationItem.backBarButtonItem = backItem
 
         // Do any additional setup after loading the view.
@@ -133,13 +135,13 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                         }
                         
                         else if realJson[i]["question"]["type"] == "dropdown" {
-                            var button1 = UIButton()
+                            let button1 = UIButton()
                             button1.frame = CGRectMake(100,100, 100, 50)
                             
                             button1.backgroundColor = UIColor.greenColor()
                             button1.setTitle("Test Button", forState: UIControlState.Normal)
                             
-                            var button2 = UIButton()
+                            let button2 = UIButton()
                             
                             button2.frame = CGRectMake(100, 150, 100, 50)
                             button2.backgroundColor = UIColor.grayColor()
