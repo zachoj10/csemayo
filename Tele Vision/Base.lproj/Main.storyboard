@@ -150,17 +150,6 @@
                                     <constraint firstAttribute="width" constant="195" id="lVU-9q-j83"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-9n-umm">
-                                <rect key="frame" x="481" y="30" width="56" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="1" green="0.023529411764705882" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9qd-T2-ibN" kind="show" identifier="logout" id="KcP-Mo-7vj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803926" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,16 +160,29 @@
                             <constraint firstItem="ghr-3r-Ujj" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="QwI-hk-BaS"/>
                             <constraint firstItem="Z5f-gl-aWd" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="67" id="TPU-hi-s0M"/>
                             <constraint firstItem="x8f-Tt-9hc" firstAttribute="top" secondItem="6dy-5e-lAX" secondAttribute="bottom" constant="26" id="Ytm-ay-JHk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wsh-9n-umm" secondAttribute="trailing" constant="43" id="gej-CS-fQo"/>
                             <constraint firstItem="1an-4s-lgD" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="inH-C1-Rpy"/>
                             <constraint firstItem="6dy-5e-lAX" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="mIP-T2-1k3"/>
                             <constraint firstItem="Z5f-gl-aWd" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="nsm-2M-Fha"/>
                             <constraint firstItem="80G-tM-oFe" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="oX9-Da-LyT"/>
-                            <constraint firstItem="wsh-9n-umm" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="31" id="xYZ-5O-Mq0"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Patient Select" id="KkC-qt-apu"/>
+                    <navigationItem key="navigationItem" title="Patient Select" id="KkC-qt-apu">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Asp-T7-ads">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wsh-9n-umm">
+                                <rect key="frame" x="524" y="7" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.023529411764705882" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9qd-T2-ibN" kind="show" identifier="logout" id="KcP-Mo-7vj"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="patientID" destination="1an-4s-lgD" id="0JH-dR-dxt"/>
                     </connections>
@@ -217,17 +219,6 @@
                                     <constraint firstAttribute="height" constant="145" id="66P-15-VJH"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7N-LC-2Jx">
-                                <rect key="frame" x="514" y="30" width="48" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="1" green="0.023529411760000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9qd-T2-ibN" kind="show" id="45E-AY-PFb"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please answer the following questions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-U9-eIB">
                                 <rect key="frame" x="29" y="125" width="543" height="47"/>
                                 <animations/>
@@ -254,18 +245,31 @@
                         <constraints>
                             <constraint firstItem="VGY-it-eXY" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" constant="58" id="Bhl-za-cKI"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="p56-PC-bPo" secondAttribute="centerX" id="LD8-rI-SmD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="M7N-LC-2Jx" secondAttribute="trailing" constant="18" id="MBS-GE-Ivj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VGY-it-eXY" secondAttribute="trailing" constant="17" id="Mbu-hC-rj3"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="bgr-uc-f9n" secondAttribute="top" constant="58" id="a7b-vc-aWV"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aQq-5b-hXB"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aaX-Vu-FGF"/>
-                            <constraint firstItem="M7N-LC-2Jx" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" constant="30" id="fkf-mv-KCu"/>
                             <constraint firstAttribute="bottom" secondItem="Ima-bb-gFz" secondAttribute="bottom" constant="20" symbolic="YES" id="mkz-DT-zgG"/>
                             <constraint firstItem="Ima-bb-gFz" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="uxt-2c-r3x"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Patient Info Form" id="wmP-Qb-4Ue"/>
+                    <navigationItem key="navigationItem" title="Patient Info Form" id="wmP-Qb-4Ue">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fei-Lc-Fpp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M7N-LC-2Jx">
+                                <rect key="frame" x="532" y="7" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.023529411760000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9qd-T2-ibN" kind="show" id="45E-AY-PFb"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-eH-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,16 +353,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
-                                <rect key="frame" x="209" y="436" width="183" height="138"/>
-                                <animations/>
-                                <color key="tintColor" red="0.058823529409999999" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnV-DZ-8P6">
                                 <rect key="frame" x="163" y="28" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
+                                <rect key="frame" x="209" y="410" width="183" height="138"/>
+                                <animations/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -366,7 +370,6 @@
                             <constraint firstItem="Rf6-yS-xDC" firstAttribute="leading" secondItem="GKK-BR-hby" secondAttribute="leadingMargin" constant="189" id="2k2-PV-Cdu"/>
                             <constraint firstItem="ohT-q1-XQR" firstAttribute="top" secondItem="Rf6-yS-xDC" secondAttribute="bottom" constant="26" id="4RT-xN-d8E"/>
                             <constraint firstItem="Rf6-yS-xDC" firstAttribute="centerX" secondItem="GKK-BR-hby" secondAttribute="centerX" id="Hji-cf-eW2"/>
-                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="top" secondItem="o2P-c4-bBf" secondAttribute="bottom" constant="416" id="h8c-6e-plz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Summary" id="Qqy-QU-NJ3"/>
@@ -406,6 +409,6 @@
         <image name="mayo-clinic-shield.png" width="687" height="529"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R0r-wu-C0T"/>
+        <segue reference="45E-AY-PFb"/>
     </inferredMetricsTieBreakers>
 </document>
