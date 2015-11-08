@@ -83,8 +83,10 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         if mediaType == (kUTTypeImage as String) {
             image = info[UIImagePickerControllerOriginalImage]
                 as! UIImage
-            
+            imageView.contentMode = .ScaleAspectFill
+            imageView.clipsToBounds = true
             imageView.image = image
+            
             
             /*if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self,
@@ -123,6 +125,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "goSummary"{
         let dest = segue.destinationViewController as! SummaryViewController
         
         dest.patientInfo = toPass
@@ -130,7 +133,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         dest.patientImg = image
         
         dest.patientAreas = passAreas
-
+        }
         
     }
 

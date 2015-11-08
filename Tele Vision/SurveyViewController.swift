@@ -20,6 +20,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
     
     var buttonFieldlabels = [String]()
 
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +54,8 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if segue.identifier == "takePhoto"{
         
         var fieldArrays = [[String]]()
         var AreaArrays = [[String]]()
@@ -91,8 +94,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
         
         dest.toPass = fieldArrays
         dest.passAreas = AreaArrays
-        
-        
+        }
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -120,7 +122,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                     
                     //get jsonfile.form.questions 1st element (starts at 0)
                 
-                    let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 300))
+                    //let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 300))
                     scrollView.backgroundColor = UIColor.clearColor()
                     scrollView.scrollEnabled = true
                     scrollView.showsVerticalScrollIndicator = true

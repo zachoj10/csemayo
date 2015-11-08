@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -48,34 +47,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-VG-1wg">
-                                <rect key="frame" x="268" y="442" width="65" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="1WN-tI-Ka2"/>
-                                </constraints>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="NGo-gt-pdF" kind="show" identifier="login" id="uNb-jc-8Wh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.92941176469999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1Px-VG-1wg" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="B8A-xW-AKQ"/>
                             <constraint firstItem="wbO-Mh-mur" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="343" id="DwY-Bw-y7Z"/>
                             <constraint firstItem="wbO-Mh-mur" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="Ift-iM-btr"/>
                             <constraint firstItem="wUb-6J-h2y" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="oT1-EU-Fs9"/>
-                            <constraint firstItem="DQR-2X-UNk" firstAttribute="top" secondItem="1Px-VG-1wg" secondAttribute="bottom" constant="36" id="piS-bF-e2C"/>
                             <constraint firstItem="3bM-vB-Rzi" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="400" id="qdd-28-sfw"/>
                             <constraint firstItem="wUb-6J-h2y" firstAttribute="top" secondItem="Q6A-50-pn0" secondAttribute="bottom" constant="20" id="sVl-6s-Rlh"/>
                             <constraint firstItem="3bM-vB-Rzi" firstAttribute="centerX" secondItem="aBW-MI-cJc" secondAttribute="centerX" id="wIJ-E0-EU3"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GtT-2t-zba"/>
+                        <barButtonItem title="Login" id="b93-eo-gZk">
+                            <connections>
+                                <segue destination="NGo-gt-pdF" kind="show" identifier="login" id="ZzM-JN-pg2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GzN-kc-PJK"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Login" id="MeS-Wi-sf8"/>
                     <connections>
                         <outlet property="password" destination="3bM-vB-Rzi" id="gl8-4D-rEu"/>
@@ -119,19 +112,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-tM-oFe">
-                                <rect key="frame" x="275" y="261" width="51" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="rlf-pu-EoR"/>
-                                </constraints>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mbg-IM-WPz" kind="show" identifier="loadPatient" id="1yI-Qp-cLF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter a Patient ID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-3r-Ujj">
                                 <rect key="frame" x="188" y="129" width="223.5" height="51"/>
                                 <animations/>
@@ -155,7 +135,6 @@
                         <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803926" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ghr-3r-Ujj" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="129" id="53I-Qz-JUF"/>
-                            <constraint firstItem="6dy-5e-lAX" firstAttribute="top" secondItem="80G-tM-oFe" secondAttribute="bottom" constant="30" id="6Ol-iW-JHO"/>
                             <constraint firstItem="1an-4s-lgD" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="195" id="GvF-7U-FXH"/>
                             <constraint firstItem="ghr-3r-Ujj" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="QwI-hk-BaS"/>
                             <constraint firstItem="Z5f-gl-aWd" firstAttribute="top" secondItem="Yc1-VY-3aL" secondAttribute="bottom" constant="67" id="TPU-hi-s0M"/>
@@ -163,10 +142,18 @@
                             <constraint firstItem="1an-4s-lgD" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="inH-C1-Rpy"/>
                             <constraint firstItem="6dy-5e-lAX" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="mIP-T2-1k3"/>
                             <constraint firstItem="Z5f-gl-aWd" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="nsm-2M-Fha"/>
-                            <constraint firstItem="80G-tM-oFe" firstAttribute="centerX" secondItem="NFP-IX-y8s" secondAttribute="centerX" id="oX9-Da-LyT"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="I8i-04-OqU"/>
+                        <barButtonItem title="Submit" id="rXL-F8-ZtA">
+                            <connections>
+                                <segue destination="mbg-IM-WPz" kind="show" identifier="loadPatient" id="p0f-9j-z57"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7ZC-cn-T5y"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Patient Select" id="KkC-qt-apu">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Asp-T7-ads">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wsh-9n-umm">
@@ -229,23 +216,17 @@
                                 <color key="textColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-it-eXY">
-                                <rect key="frame" x="514" y="58" width="49" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7GZ-mV-9G3">
+                                <rect key="frame" x="0.0" y="182" width="600" height="128"/>
                                 <animations/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="59T-ye-Re7" kind="show" id="vwh-Um-rdp"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VGY-it-eXY" firstAttribute="top" secondItem="3di-gj-U23" secondAttribute="bottom" constant="58" id="Bhl-za-cKI"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="p56-PC-bPo" secondAttribute="centerX" id="LD8-rI-SmD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VGY-it-eXY" secondAttribute="trailing" constant="17" id="Mbu-hC-rj3"/>
+                            <constraint firstItem="7GZ-mV-9G3" firstAttribute="top" secondItem="nc3-U9-eIB" secondAttribute="bottom" constant="10" id="MbS-Mm-SiK"/>
+                            <constraint firstItem="Ima-bb-gFz" firstAttribute="top" secondItem="7GZ-mV-9G3" secondAttribute="bottom" constant="17" id="RQL-x8-bch"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="top" secondItem="bgr-uc-f9n" secondAttribute="top" constant="58" id="a7b-vc-aWV"/>
                             <constraint firstItem="p56-PC-bPo" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aQq-5b-hXB"/>
                             <constraint firstItem="nc3-U9-eIB" firstAttribute="centerX" secondItem="bgr-uc-f9n" secondAttribute="centerX" id="aaX-Vu-FGF"/>
@@ -254,6 +235,15 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Il7-Xt-78Y"/>
+                        <barButtonItem title="Submit" id="6rS-Te-KUr">
+                            <connections>
+                                <segue destination="59T-ye-Re7" kind="show" identifier="takePhoto" id="S4f-GK-yVt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="YQB-oe-8vb"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Patient Info Form" id="wmP-Qb-4Ue">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fei-Lc-Fpp">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M7N-LC-2Jx">
@@ -270,6 +260,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="7GZ-mV-9G3" id="ssA-VA-gFE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boy-eH-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,25 +280,6 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-Bg-KEy">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <animations/>
-                                <items>
-                                    <barButtonItem title="Logout" id="AcW-fS-2J0">
-                                        <connections>
-                                            <segue destination="9qd-T2-ibN" kind="show" id="R0r-wu-C0T"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="wuu-jj-GVP"/>
-                                    <barButtonItem systemItem="camera" id="q4T-bq-5Bo">
-                                        <connections>
-                                            <action selector="takePhoto:" destination="59T-ye-Re7" id="kKn-ON-qt4"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="aVW-A3-KZr"/>
-                                    <barButtonItem systemItem="save" id="9k6-f9-ygA"/>
-                                </items>
-                            </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-IP-h3h">
                                 <rect key="frame" x="77" y="35" width="447" height="422"/>
                                 <animations/>
@@ -328,7 +302,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Vh2-pm-MBu"/>
                         <barButtonItem title="Submit" id="CDB-r2-OWf">
                             <connections>
-                                <segue destination="1CL-eR-2KA" kind="show" id="dZ5-fB-Gpz"/>
+                                <segue destination="1CL-eR-2KA" kind="show" identifier="goSummary" id="dZ5-fB-Gpz"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -353,26 +327,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnV-DZ-8P6">
-                                <rect key="frame" x="163" y="28" width="49" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-LR-dt8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="343"/>
                                 <animations/>
-                                <state key="normal" title="Submit"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayo-clinic-shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-yS-xDC">
                                 <rect key="frame" x="209" y="410" width="183" height="138"/>
                                 <animations/>
                                 <color key="tintColor" red="0.058823529409999999" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="Jvj-af-0Kj"/>
+                                    <constraint firstAttribute="width" constant="183" id="gbZ-fL-Yyk"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.94509803920000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="leading" secondItem="GKK-BR-hby" secondAttribute="leadingMargin" constant="189" id="2k2-PV-Cdu"/>
-                            <constraint firstItem="ohT-q1-XQR" firstAttribute="top" secondItem="Rf6-yS-xDC" secondAttribute="bottom" constant="26" id="4RT-xN-d8E"/>
-                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="centerX" secondItem="GKK-BR-hby" secondAttribute="centerX" id="Hji-cf-eW2"/>
+                            <constraint firstItem="ohT-q1-XQR" firstAttribute="top" secondItem="Rf6-yS-xDC" secondAttribute="bottom" constant="8" id="JWo-bJ-7tg"/>
+                            <constraint firstItem="qrz-LR-dt8" firstAttribute="top" secondItem="o2P-c4-bBf" secondAttribute="bottom" id="p19-Ri-BrF"/>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="top" secondItem="qrz-LR-dt8" secondAttribute="bottom" constant="3" id="pPU-I5-V3r"/>
+                            <constraint firstItem="Rf6-yS-xDC" firstAttribute="centerX" secondItem="GKK-BR-hby" secondAttribute="centerX" id="s7M-Jo-UVM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Summary" id="Qqy-QU-NJ3"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XCQ-fe-FQM"/>
+                        <barButtonItem title="Submit" id="3Ik-8B-UpK"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="qh2-Sz-vf5"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Summary" id="Qqy-QU-NJ3">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel All" id="io4-Lr-SFj">
+                            <color key="tintColor" red="1" green="0.0060592641201631103" blue="0.068836459367111469" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="9qd-T2-ibN" kind="show" id="wiJ-B2-FNm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="qrz-LR-dt8" id="eL8-L2-iv1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2T-40-NBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,7 +393,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r19-Bf-C4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783" y="414"/>
+            <point key="canvasLocation" x="3175" y="442"/>
         </scene>
     </scenes>
     <resources>
@@ -409,6 +402,6 @@
         <image name="mayo-clinic-shield.png" width="687" height="529"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="45E-AY-PFb"/>
+        <segue reference="wiJ-B2-FNm"/>
     </inferredMetricsTieBreakers>
 </document>

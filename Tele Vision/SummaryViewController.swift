@@ -16,6 +16,7 @@ class SummaryViewController: UIViewController {
     
     var patientImg:UIImage!
 
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +40,7 @@ class SummaryViewController: UIViewController {
         
         let middleScreen = screenWidth * 0.5;
         
-        let scrollView = UIScrollView(frame: CGRectMake(10, 60, 350, 400))
+        //let scrollView = UIScrollView(frame: CGRectMake(10, 60, 350, 400))
         scrollView.backgroundColor = UIColor.clearColor()
         scrollView.scrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
