@@ -18,6 +18,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
     
     var buttonControllers = [SSRadioButtonsController?]()
     
+    @IBOutlet weak var surveyScroll: UIScrollView!
     var buttonFieldlabels = [String]()
 
     override func viewDidLoad() {
@@ -120,10 +121,10 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                     
                     //get jsonfile.form.questions 1st element (starts at 0)
                 
-                    let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 300))
-                    scrollView.backgroundColor = UIColor.clearColor()
-                    scrollView.scrollEnabled = true
-                    scrollView.showsVerticalScrollIndicator = true
+                    //let scrollView = UIScrollView(frame: CGRectMake(10, 175, 350, 300))
+                    surveyScroll.backgroundColor = UIColor.clearColor()
+                    surveyScroll.scrollEnabled = true
+                    surveyScroll.showsVerticalScrollIndicator = true
                     
                     let realJson = jsonObj["form"]["questions"]
                     
@@ -149,7 +150,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                         
                             tempText.backgroundColor = UIColor.whiteColor();
                             //add uitextview to main view
-                            scrollView.addSubview(tempText)
+                            surveyScroll.addSubview(tempText)
                         
                             //put the json in var realJson you just gathered, into the uitextview you created
                             tempText.attributedPlaceholder = NSMutableAttributedString(string:"\(text)")
@@ -163,7 +164,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                             
                             tempText.backgroundColor = UIColor.whiteColor();
                             //add uitextview to main view
-                            scrollView.addSubview(tempText)
+                            surveyScroll.addSubview(tempText)
                             
                             startingHeight += 30.0
                             
@@ -202,7 +203,7 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                                 radioButtonController!.addButton(tempButton)
                                 
                                 
-                                scrollView.addSubview(tempButton)
+                                surveyScroll.addSubview(tempButton)
 
                             }
                             
@@ -219,19 +220,22 @@ class SurveyViewController: UIViewController, SSRadioButtonControllerDelegate {
                         startingHeight += 70.0
                         
                         let tempLabel = UILabel(frame: CGRectMake(10, 10.0 + labelHeight, 100, 30))
-                        scrollView.addSubview(tempLabel)
+                        surveyScroll.addSubview(tempLabel)
                         
                         tempLabel.text = "\(text)"
                         tempLabel.textColor = swiftColor;
                         tempLabel.textAlignment = NSTextAlignment.Right
                         
+                        
+                        let width = UIScreen.mainScreen().bounds.width - 30;
+                        
                         let contentHeightClean = CGFloat(startingHeight);
-                        scrollView.contentSize = CGSizeMake(350, contentHeightClean);
+                        surveyScroll.contentSize = CGSizeMake(width, contentHeightClean);
 
 
                     }
                     
-                    view.addSubview(scrollView)
+                    //view.addSubview(scrollView)
 
                 
                     
