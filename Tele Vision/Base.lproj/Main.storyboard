@@ -350,11 +350,7 @@
                             <constraint firstItem="Rf6-yS-xDC" firstAttribute="centerX" secondItem="GKK-BR-hby" secondAttribute="centerX" id="s7M-Jo-UVM"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XCQ-fe-FQM"/>
-                        <barButtonItem title="Submit" id="3Ik-8B-UpK"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="qh2-Sz-vf5"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Summary" id="Qqy-QU-NJ3">
                         <barButtonItem key="rightBarButtonItem" title="Cancel All" id="io4-Lr-SFj">
                             <color key="tintColor" red="1" green="0.0060592641201631103" blue="0.068836459367111469" alpha="1" colorSpace="calibratedRGB"/>

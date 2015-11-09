@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DC3586D1BF003CA0001D7BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3586C1BF003CA0001D7BB /* Constants.swift */; };
 		9254186F1BA0DA18007D2F96 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254186E1BA0DA18007D2F96 /* SurveyViewController.swift */; };
 		925418711BA0DA29007D2F96 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925418701BA0DA29007D2F96 /* PhotoViewController.swift */; };
 		92724B8C1BBCD2B0003969A2 /* pro.json in Resources */ = {isa = PBXBuildFile; fileRef = 92724B8B1BBCD2B0003969A2 /* pro.json */; };
@@ -26,6 +27,7 @@
 		92F8FD4B1B9FA7AB0099300A /* mayobg.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F8FD491B9FA7AB0099300A /* mayobg.png */; };
 		92F8FD4D1B9FA8830099300A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F8FD4C1B9FA8830099300A /* LoginViewController.swift */; };
 		92F8FD4F1B9FA88D0099300A /* PatientIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */; };
+		A78D778315E75AEA65D1A0C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9221CA0B596ACA2A06F06364 /* libPods.a */; };
 		C940ACF01BE519D00019802B /* mayo-clinic-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C940ACEF1BE519D00019802B /* mayo-clinic-logo.png */; };
 		C940ACF21BE51F290019802B /* mayo-clinic-shield.png in Resources */ = {isa = PBXBuildFile; fileRef = C940ACF11BE51F290019802B /* mayo-clinic-shield.png */; };
 		C96EB6991BE7EBB500DC7A5D /* mayo_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = C96EB6981BE7EBB500DC7A5D /* mayo_splash.png */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F0852565A33AAF204B4C894 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6DC3586B1BF003360001D7BB /* ObjectiveC_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveC_Bridging_Header.h; sourceTree = "<group>"; };
+		6DC3586C1BF003CA0001D7BB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9221CA0B596ACA2A06F06364 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9254186E1BA0DA18007D2F96 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		925418701BA0DA29007D2F96 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92724B8B1BBCD2B0003969A2 /* pro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pro.json; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 		92F8FD491B9FA7AB0099300A /* mayobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mayobg.png; sourceTree = "<group>"; };
 		92F8FD4C1B9FA8830099300A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		92F8FD4E1B9FA88D0099300A /* PatientIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientIDViewController.swift; sourceTree = "<group>"; };
+		AD278B05FA78C7816BBDD108 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C940ACEF1BE519D00019802B /* mayo-clinic-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mayo-clinic-logo.png"; sourceTree = SOURCE_ROOT; };
 		C940ACF11BE51F290019802B /* mayo-clinic-shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mayo-clinic-shield.png"; sourceTree = SOURCE_ROOT; };
 		C96EB6981BE7EBB500DC7A5D /* mayo_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mayo_splash.png; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78D778315E75AEA65D1A0C1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,8 @@
 				92D4E67E1B9E47E700430D3E /* Tele Vision */,
 				92D4E6981B9E47E700430D3E /* Tele VisionTests */,
 				92D4E67D1B9E47E700430D3E /* Products */,
+				FA3C91A341D7DC23F7143E80 /* Pods */,
+				DD85D3D397765179ECB88AEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +141,7 @@
 				92D4E68E1B9E47E700430D3E /* LaunchScreen.xib */,
 				92D4E67F1B9E47E700430D3E /* Supporting Files */,
 				929919391BE889B300BB5BD9 /* SummaryViewController.swift */,
+				6DC3586C1BF003CA0001D7BB /* Constants.swift */,
 			);
 			path = "Tele Vision";
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				92D4E6801B9E47E700430D3E /* Info.plist */,
+				6DC3586B1BF003360001D7BB /* ObjectiveC_Bridging_Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +172,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DD85D3D397765179ECB88AEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9221CA0B596ACA2A06F06364 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA3C91A341D7DC23F7143E80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F0852565A33AAF204B4C894 /* Pods.debug.xcconfig */,
+				AD278B05FA78C7816BBDD108 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92D4E69F1B9E47E700430D3E /* Build configuration list for PBXNativeTarget "Tele Vision" */;
 			buildPhases = (
+				F40F294B43CAAA8748C20C23 /* Check Pods Manifest.lock */,
 				92D4E6781B9E47E700430D3E /* Sources */,
 				92D4E6791B9E47E700430D3E /* Frameworks */,
 				92D4E67A1B9E47E700430D3E /* Resources */,
+				0F97018AD923348918EB32AE /* Embed Pods Frameworks */,
+				6CA47EBABB55DD2F6200D5AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +297,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F97018AD923348918EB32AE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CA47EBABB55DD2F6200D5AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F40F294B43CAAA8748C20C23 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92D4E6781B9E47E700430D3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -281,6 +361,7 @@
 				92D4E6821B9E47E700430D3E /* AppDelegate.swift in Sources */,
 				9299193A1BE889B300BB5BD9 /* SummaryViewController.swift in Sources */,
 				92C9EE181BE973BD00325004 /* SSRadioButton.swift in Sources */,
+				6DC3586D1BF003CA0001D7BB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +492,7 @@
 		};
 		92D4E6A01B9E47E700430D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0852565A33AAF204B4C894 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -422,11 +504,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone2.Tele-Vision.Tele-Vision";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tele Vision/ObjectiveC_Bridging_Header.h";
 			};
 			name = Debug;
 		};
 		92D4E6A11B9E47E700430D3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD278B05FA78C7816BBDD108 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -438,6 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.capstone2.Tele-Vision.Tele-Vision";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tele Vision/ObjectiveC_Bridging_Header.h";
 			};
 			name = Release;
 		};

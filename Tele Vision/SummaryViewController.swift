@@ -19,10 +19,7 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         displayInfo()
-
         // Do any additional setup after loading the view.
     }
 
@@ -31,16 +28,33 @@ class SummaryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //delete the generated pdf
+    func deleteFile() {
+        let fileManager = NSFileManager()
+
+        let dir : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first!
+        let fileURL = dir.stringByAppendingPathComponent("test.pdf")
+        
+        do {
+            try fileManager.removeItemAtPath(fileURL)
+            print("successfully deleted pdf")
+        } catch {
+            print("No file found")
+        }
+    }
+    //delete the generated pdf end
+    
+
+
     func displayInfo(){
         var pdfString = "<body><h1 style=\"text-align:center\"><b>PATIENT RECORD OUTCOME</b></h1>"
         let screenSize: CGRect = UIScreen.mainScreen().bounds
 
         let screenWidth = screenSize.width
-        //let screenHeight = screenSize.height
         
         let middleScreen = screenWidth * 0.5;
         
-        //let scrollView = UIScrollView(frame: CGRectMake(10, 60, 350, 400))
         scrollView.backgroundColor = UIColor.clearColor()
         scrollView.scrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
@@ -162,12 +176,59 @@ class SummaryViewController: UIViewController {
             print (dir)
             do {
                 try pdfData.writeToFile(path, atomically: true)
+                
+                //start of amazon s3 connection
+                //taken from http://shrikar.com/ios-app-development-upload-images-to-aws-s3/
+                //changed some lines to conform to swift2.0
+                
+                let transferManager = AWSS3TransferManager.defaultS3TransferManager()
+                
+                let testFileURL1 = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("temp")
+                let uploadRequest1 : AWSS3TransferManagerUploadRequest = AWSS3TransferManagerUploadRequest()
+                
+                pdfData.writeToURL(testFileURL1, atomically: true)
+                
+                uploadRequest1.bucket = "cse486-teamjuly"
+                uploadRequest1.key =  "patientRecord"
+                uploadRequest1.body = testFileURL1
+                
+                let task = transferManager.upload(uploadRequest1)
+
+                task.continueWithBlock { (task) -> AnyObject! in
+                    if task.error != nil {
+                        print("Error: \(task.error)")
+                        
+                        //alert saying unsuccessful upload
+                        let alertController = UIAlertController(title: "Upload Unsuccessful", message: task.error.localizedDescription, preferredStyle: .Alert)
+                        
+                        let yesAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        alertController.addAction(yesAction)
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    
+                    } else {
+                        print("Upload successful")
+                        
+                        //alert saying successful upload
+                        let alertController = UIAlertController(title: "Upload Successful", message: "Successful upload to Mayo Clinic Servers", preferredStyle: .Alert)
+                        
+                        let yesAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        alertController.addAction(yesAction)
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        
+                        //delete the pdf file
+                        self.deleteFile()
+                    }
+                    return nil
+                }
+                //end of amazon s3 conenction
             }
         
             catch {
                 print ("error")
             }
         }
+        
+        
     }
     
 
@@ -180,5 +241,5 @@ class SummaryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
